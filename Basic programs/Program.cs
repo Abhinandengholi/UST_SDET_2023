@@ -38,14 +38,12 @@ default:Console.Writeline("4");
 break;
 
 
-//driver
-using Basic_programs;
 
 Calculation calculation = new Calculation();
 int num1 = Convert.ToInt32(Console.ReadLine());
 int num2 = Convert.ToInt32(Console.ReadLine());
  double  res=calculation.Add(num1, num2);
-Console.WriteLine(res);*/
+Console.WriteLine(res);
 
 
 using Basic_programs;
@@ -61,3 +59,24 @@ Electricity eletricity2 = new Electricity(23456, 9000, 10000, "Aju");
 Console.WriteLine(eletricity2.consumernumber);
 Console.WriteLine(eletricity2.consumername);
 Console.WriteLine(eletricity2.CalculateBill());
+
+
+using Basic_programs;
+Employee employee = new Employee(111, "Abhi", "IT", 10000);
+
+Console.WriteLine("Emp id : {0} \n Name : {1} \n Dept : {2} \n  Basicpay : {3}",
+    employee.Empid,
+    employee.Empname,
+    employee.Empdept,
+    employee.Basicpay);
+//Console.WriteLine("Emplid"+employee.Empid);
+//Console.WriteLine(employee.Empname);
+//Console.WriteLine(employee.Empdept);
+//Console.WriteLine(employee.Basicpay);
+//Console.WriteLine(employee.CalculateSalary());*/
+//driver
+using Basic_programs;
+ArraysEx arr=new ArraysEx();
+//arr.Onedim(); 
+//arr.Twodim();
+arr.Ja();
