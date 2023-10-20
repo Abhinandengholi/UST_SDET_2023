@@ -73,10 +73,116 @@ Console.WriteLine("Emp id : {0} \n Name : {1} \n Dept : {2} \n  Basicpay : {3}",
 //Console.WriteLine(employee.Empname);
 //Console.WriteLine(employee.Empdept);
 //Console.WriteLine(employee.Basicpay);
-//Console.WriteLine(employee.CalculateSalary());*/
+//Console.WriteLine(employee.CalculateSalary());
 //driver
 using Basic_programs;
 ArraysEx arr=new ArraysEx();
 //arr.Onedim(); 
 //arr.Twodim();
 arr.Ja();
+using Basic_programs;
+StudentMarks marks = new();
+marks.Rollno = 10;
+marks.StudName = "Abhi";
+marks.Mark1 = 97;
+marks.Mark2 = 87;
+marks.Mark3 = 93;
+marks.DisplayStudentDetials();
+Console.WriteLine("Total" +marks.CalculateTotal());
+Console.WriteLine("Average" + marks.CalculateAverage());
+using Basic_programs;
+StudentGrade grade = new ();
+grade.Rollno = 180;
+grade.StudName = "Amr";
+grade.Mark1 = 97;
+grade.Mark2 = 77;
+grade.Mark3 = 93;
+grade.DisplayStudentDetials();
+Console.WriteLine("Total" + grade.CalculateTotal());
+Console.WriteLine("Average" + grade.CalculateAverage()); 
+Console.WriteLine("Grade"+ grade.CalculateGrade());
+using Basic_programs;
+
+Console.WriteLine("1.TS 2.NTS");
+switch (Convert.ToInt32(Console.ReadLine()))
+{
+    case 1:
+        TeachingStaff ts = new TeachingStaff();
+        ts.Staffid = 111;
+        ts.Name = "TS1";
+        ts.Dept = "cs";
+        ts.Specializations = "OS,DBMS,DS";
+        ts.sem = 4;
+        ts.DisplayStaffDetials();
+        ts.DisplayTSStaffDetails();
+        break;
+        case 2:
+        NonTeachingStaff nts = new NonTeachingStaff();
+        nts.Staffid = 100;
+        nts.Name = "NTS1";
+        nts.Dept = "Admin";
+        nts.Responsibilities = "Attendence";
+        nts.Experience = 4;
+        nts.DisplayStaffDetials();
+        nts.DisplayNTSStaffDetails();
+        break;
+}
+using Basic_programs;
+
+Console.WriteLine("1.TS 2.NTS 3.College 4.Student");
+switch (Convert.ToInt32(Console.ReadLine()))
+{
+    case 1:
+        TeachingStaff ts = new TeachingStaff();
+        ts.Staffid = 111;
+        ts.Name = "TS1";
+        ts.Dept = "cs";
+        ts.Specializations = "OS,DBMS,DS";
+        ts.sem = 4;
+        ts.DisplayStaffDetials();
+        ts.DisplayTSStaffDetails();
+        break;
+    case 2:
+        NonTeachingStaff nts = new NonTeachingStaff();
+        nts.Staffid = 100;
+        nts.Name = "NTS1";
+        nts.Dept = "Admin";
+        nts.Responsibilities = "Attendence";
+        nts.Experience = 4;
+        nts.DisplayStaffDetials();
+        nts.DisplayNTSStaffDetails();
+        break;
+        case 3:
+        College collg=new College();
+        collg.Collegeid = 19678;
+        collg.CollegeName = "COET";
+        collg.CollegeEstablished = 1999;
+        collg.DisplayCollegeDetials();
+        break;
+    case 4:
+        StudentDetails sd=new StudentDetails();
+        sd.Rollno = 1;
+        sd.StudName = "Abhi";
+        sd.City = "LA";
+        sd.DisplayStudentDetials();
+        break;
+}
+
+using Basic_programs;
+EV ev = new();
+ev.Vehnum = 9746;
+ev.Brand = "EXT";
+ev.Model = "AA";
+ev.setTypeForVeh();
+ev.Disp();
+Console.WriteLine(ev.setTypeForVeh());
+
+PV pv = new();
+pv.Vehnum = 5996;
+pv.Brand = "PVT";
+pv.Model = "YEY";
+pv.Disp();
+Console.WriteLine(pv.setTypeForVeh());
+ 
+*/
+

@@ -16,7 +16,7 @@ foreach (Product product in prod)
 {
     product.DisplayProduct();
     product.ProductValue();
-}*/
+}
 using Assignments;
 Student[] student = new Student[3];
 student[0] = new Student("Abhi", "A",new int[] {90,80,70});
@@ -30,6 +30,31 @@ foreach (Student st in student)
     st.GetMarkssummary();
     Console.WriteLine();
 }
+*/
+using Assignments;
 
 
-
+Console.WriteLine("1.EP 2.DP 3.CP ");
+switch (Convert.ToInt32(Console.ReadLine()))
+{
+    case 1:
+        ElectronicsProduct ep = new ElectronicsProduct("Samsung",10000,1,12);
+        ep.DisplayProduct();
+        ep.DisplayWarrentyPeriod();
+       
+        break;
+    case 2:
+        DigitalProduct dp=new DigitalProduct("Samsung", 100000,2,12,"MP3");
+        
+        dp.DisplayDigitalProduct();
+        dp.DisplayProduct();
+        break;
+    case 3:
+        ClothingProduct cp = new ClothingProduct("RM", 30000, 2, "Medium");
+      
+        cp.DisplayProduct();
+        cp.DisplaySize();
+       
+        break;
+    
+}
