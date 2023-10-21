@@ -1,12 +1,13 @@
 ﻿using Case_Study;
 using System.ComponentModel.Design;
 
+//String? a = "YES";
 int num = 1;
 string? title;
 do
 {
     Console.WriteLine("choose option");
-    Console.WriteLine("1.Add Book\n 2.Add Customer\n 3.Place order\n 4.Search for book\n 5.View order\n ");
+    Console.WriteLine("1.Add Book\n 2.Add Customer\n 3.Place order\n 4.Search for book\n 5.Exit\n ");
     int option = Convert.ToInt32(Console.ReadLine());
     Order or = new Order();
     Booktype[] bt = new Booktype[]
@@ -86,6 +87,6 @@ do
             Console.WriteLine("Invalid");
             break;
     }
-    Console.WriteLine("Do you want to continue");
-    num = Convert.ToInt32(Console.ReadLine());
-} while (num != 0);
+    Console.WriteLine("Do you want to continue?");
+    num =Convert.ToInt32( Console.ReadLine());
+} while (num!=0);
