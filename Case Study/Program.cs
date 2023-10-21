@@ -11,7 +11,8 @@ do
     int option = Convert.ToInt32(Console.ReadLine());
     Order or = new Order();
     Booktype[] bt = new Booktype[]
-        { new("Alchemist", "Paulo coelho", 198, 243, true, "FantasyFiction")
+        { new("Alchemist", "Paulo coelho", 198, 243, true, "FantasyFiction"),
+        new ("Ikigai", "Hector", 199, 353, true, "Motivation")
         };
 
     switch (option)
