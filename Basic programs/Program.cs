@@ -80,6 +80,7 @@ ArraysEx arr=new ArraysEx();
 //arr.Onedim(); 
 //arr.Twodim();
 arr.Ja();
+//20/10/2023
 using Basic_programs;
 StudentMarks marks = new();
 marks.Rollno = 10;
@@ -185,4 +186,15 @@ pv.Disp();
 Console.WriteLine(pv.setTypeForVeh());
  
 */
+using Basic_programs;
+//Doctor doct = new Doctor();
+Doctor doct = new Doctor();
+
+doct.AddNewDoctor(9004,"anj");
+doct.DisplayDoctorDetails();
+doct.ModifyDoctor(9005,"ab");
+doct.DisplayDoctorDetails();
+doct.BookApp(12, "Amr");
+doct.DelApp("am");
+
 
