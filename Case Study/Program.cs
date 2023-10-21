@@ -1,7 +1,7 @@
 ﻿using Case_Study;
 using System.ComponentModel.Design;
 
-//String? a = "YES";
+
 int num = 1;
 string? title;
 do
