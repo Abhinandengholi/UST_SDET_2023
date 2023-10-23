@@ -185,7 +185,7 @@ pv.Model = "YEY";
 pv.Disp();
 Console.WriteLine(pv.setTypeForVeh());
  
-*/
+
 using Basic_programs;
 //Doctor doct = new Doctor();
 Doctor doct = new Doctor();
@@ -195,6 +195,41 @@ doct.DisplayDoctorDetails();
 doct.ModifyDoctor(9005,"ab");
 doct.DisplayDoctorDetails();
 doct.BookApp(12, "Amr");
-doct.DelApp("am");
+doct.DelApp("am");*/
+using Basic_programs;
+//BankDetails bnk3 = new();
+//BankDetails bnk1 = new(123, 323232, "Abhi");
+BankDetailsNew bnk2 = new(123, 323232, "Abhi", "Inactive");
+
+BankDetails.Welcomemessage();
+//bnk2.Welcomemessage("Abhi");
+Console.WriteLine("1.Custid 2.Acc No 3.Name");
+int ch = Convert.ToInt32(Console.ReadLine());
+switch (ch)
+{
+    case 1:
+        Console.WriteLine("Custid: ");
+        //bnk1.GetAccDetails(Convert.ToInt32(Console.ReadLine()));
+        bnk2.GetAccDetails(Convert.ToInt32(Console.ReadLine()));
+       // bnk3.GetAccDetails(Convert.ToInt32(Console.ReadLine()));
+
+
+        break;
+    case 2:
+        Console.WriteLine("Acc NO: ");
+        //bnk1.GetAccDetails(Convert.ToInt64(Console.ReadLine()));
+        bnk2.GetAccDetails(Convert.ToInt64(Console.ReadLine()));
+       // bnk3.GetAccDetails(Convert.ToInt64(Console.ReadLine()));
+        break;
+    case 3:
+        Console.WriteLine("Name: ");
+       // bnk1.GetAccDetails(Console.ReadLine());
+        bnk2.GetAccDetails(Console.ReadLine());
+       // bnk3.GetAccDetails(Console.ReadLine());
+        break;
+    default:Console.WriteLine("Enter between 1-3");
+        break;
+}
+//BankDetails.ExitMessage();
 
 

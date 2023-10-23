@@ -30,7 +30,7 @@ foreach (Student st in student)
     st.GetMarkssummary();
     Console.WriteLine();
 }
-*/
+
 using Assignments;
 
 
@@ -58,3 +58,19 @@ switch (Convert.ToInt32(Console.ReadLine()))
         break;
     
 }
+
+using Assignments;
+Employee emp = new(12, "Abhi", "nand", 17);
+emp.DisplayInfo();*/
+using Assignments;
+Circle circle = new Circle()
+{
+    Radius =4
+};
+Rectangle rect = new Rectangle
+{
+    Width = 10,
+    Length = 10
+};
+circle.Draw();
+rect.Draw();
