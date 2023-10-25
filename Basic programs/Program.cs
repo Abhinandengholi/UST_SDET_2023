@@ -195,7 +195,7 @@ doct.DisplayDoctorDetails();
 doct.ModifyDoctor(9005,"ab");
 doct.DisplayDoctorDetails();
 doct.BookApp(12, "Amr");
-doct.DelApp("am");*/
+doct.DelApp("am");
 using Basic_programs;
 //BankDetails bnk3 = new();
 //BankDetails bnk1 = new(123, 323232, "Abhi");
@@ -230,6 +230,16 @@ switch (ch)
     default:Console.WriteLine("Enter between 1-3");
         break;
 }
-//BankDetails.ExitMessage();
-
+//BankDetails.ExitMessage();*/
+//25/10/2023
+using Basic_programs;
+//NGC nGC=new NGC();
+//nGC.ArrayListHandling();
+/////nGC.Stackhandling();
+//nGC.Queuehandling();
+//nGC.HashTableHandling();
+//nGC.SortedListhandling();
+Basic_programs.GenericCollection gc = new GenericCollection();
+gc.ListHandling();
+gc.SortedListhandling();
 

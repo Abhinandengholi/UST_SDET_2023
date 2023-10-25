@@ -61,7 +61,7 @@ switch (Convert.ToInt32(Console.ReadLine()))
 
 using Assignments;
 Employee emp = new(12, "Abhi", "nand", 17);
-emp.DisplayInfo();*/
+emp.DisplayInfo();
 using Assignments;
 Circle circle = new Circle()
 {
@@ -73,4 +73,16 @@ Rectangle rect = new Rectangle
     Length = 10
 };
 circle.Draw();
-rect.Draw();
+rect.Draw();*/
+using Assignments;
+// InsurancePolicy ip=new InsurancePolicy("Healthcare",200,20000);
+//Console.WriteLine("Premium amount");
+//ip.Display();
+//ip.RenewPolicy(21000);
+//ip.RenewPolicy();
+LifeInsurance li = new("Jeevan", 233, 1200, 65);
+li.CalculatePremium();
+Console.WriteLine("Life insurance premium amount:"+li.PremiumAmount);
+CarInsurance ci = new("Jeevanraksha", 234, 12000, 2000000);
+ci.CalculatePremium();
+Console.WriteLine(" Car Insurance premium amount:" + ci.PremiumAmount);
