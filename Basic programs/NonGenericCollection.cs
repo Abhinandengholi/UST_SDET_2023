@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Basic_programs
 {
-    internal class NGC
+    internal class NonGenericCollection
     {
         public void ArrayListHandling() 
         {
