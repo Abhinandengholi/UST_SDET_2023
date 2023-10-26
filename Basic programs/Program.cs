@@ -232,14 +232,52 @@ switch (ch)
 }
 //BankDetails.ExitMessage();*/
 //25/10/2023
+//using Basic_programs;
+////NGC nGC=new NGC();
+////nGC.ArrayListHandling();
+///////nGC.Stackhandling();
+////nGC.Queuehandling();
+////nGC.HashTableHandling();
+////nGC.SortedListhandling();
+//Basic_programs.GenericCollection gc = new GenericCollection();
+//gc.ListHandling();
+//gc.SortedListhandling();
+//26/10/2023
 using Basic_programs;
-//NGC nGC=new NGC();
-//nGC.ArrayListHandling();
-/////nGC.Stackhandling();
-//nGC.Queuehandling();
-//nGC.HashTableHandling();
-//nGC.SortedListhandling();
-Basic_programs.GenericCollection gc = new GenericCollection();
-gc.ListHandling();
-gc.SortedListhandling();
+using Basic_programs.ExceptionMessages;
+
+ExcepHandling excep=new ExcepHandling(101,2);
+try
+{
+    excep.NumCheck();
+}
+catch (ArgumentException ex)
+{
+    //Console.WriteLine(MyException.exmessagelist[3]);
+    Console.WriteLine(ex.Message);
+}
+//try
+//{
+//    excep.Divide();
+    
+//}
+//catch (ArithmeticException ex)
+//{
+
+
+//    Console.WriteLine(MyException.exmessagelist[0]);
+//}
+//catch (IndexOutOfRangeException ex)
+//{
+//    Console.WriteLine(MyException.exmessagelist[1]);
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine(MyException.exmessagelist[2]);
+//}
+//finally
+//{
+//    Console.WriteLine("done");//release memomry,before exiting the code
+//}
+
 
