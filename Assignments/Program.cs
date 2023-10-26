@@ -74,15 +74,63 @@ Rectangle rect = new Rectangle
 };
 circle.Draw();
 rect.Draw();*/
-using Assignments;
+//using Assignments;
 // InsurancePolicy ip=new InsurancePolicy("Healthcare",200,20000);
 //Console.WriteLine("Premium amount");
 //ip.Display();
 //ip.RenewPolicy(21000);
 //ip.RenewPolicy();
-LifeInsurance li = new("Jeevan", 233, 1200, 65);
-li.CalculatePremium();
-Console.WriteLine("Life insurance premium amount:"+li.PremiumAmount);
-CarInsurance ci = new("Jeevanraksha", 234, 12000, 2000000);
-ci.CalculatePremium();
-Console.WriteLine(" Car Insurance premium amount:" + ci.PremiumAmount);
+//LifeInsurance li = new("Jeevan", 233, 1200, 65);
+//li.CalculatePremium();
+//Console.WriteLine("Life insurance premium amount:"+li.PremiumAmount);
+//CarInsurance ci = new("Jeevanraksha", 234, 12000, 2000000);
+//ci.CalculatePremium();
+//Console.WriteLine(" Car Insurance premium amount:" + ci.PremiumAmount);
+using Assignments;
+using System.Security.Cryptography.X509Certificates;
+
+Customer cust1=new (1,"Abhi","6473553763",2300.4);
+Customer cust2 = new (2, "Amr", "6474553763", 2600.4);
+Customer cust3 = new (3, "Aju", "6473353763", 2360.4);
+List<Customer> cust=new List<Customer>()
+{ cust1,cust2,cust3};
+     void SearchCust(string phonenumber)
+
+{
+    Customer cus = null;
+    foreach (var i in cust)
+    {
+
+        if (i.PhoneNumber == phonenumber)
+        {
+            cus = i;
+            // Console.WriteLine("name:{0}\t Balance:{1}\t", i.Name, i.Balance);
+            break;
+        }
+    }
+        if (cus != null) { Console.WriteLine("name:{0}\t Balance:{1}\t", cus.Name, cus.Balance); }
+
+    
+    else
+    {
+        Console.WriteLine("Customer Deatails not found or phonenumber not match");
+    }
+
+    }
+
+     void DisplayCustomer()
+    {
+        foreach (var i in cust)
+        {
+            Console.WriteLine("Customer id:{0}\t CustomerName:{1}\t Customer Phonenumber:{2}\t Balance{3}\t", i.CustomerId, i.Name, i.PhoneNumber, i.Balance);
+        }
+    }
+    
+   
+
+
+
+
+SearchCust("6473553763");
+SearchCust("6543544366");
+DisplayCustomer();

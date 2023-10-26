@@ -245,13 +245,32 @@ switch (ch)
 //26/10/2023
 using Basic_programs;
 using Basic_programs.ExceptionMessages;
+using static Basic_programs.ExceptionMessages.MyException;
 
-ExcepHandling excep=new ExcepHandling(101,2);
+ExcepHandling excep=new ExcepHandling(1,105);
+//try
+//{
+//    excep.NumCheck();
+//}
+//catch (ArgumentException )
+//{
+//    //Console.WriteLine(MyException.exmessagelist[3]);
+//    Console.WriteLine(ex.Message);
+//}
 try
 {
     excep.NumCheck();
 }
-catch (ArgumentException ex)
+catch (Number1Exception ex)
+{
+    //Console.WriteLine(MyException.exmessagelist[3]);
+    Console.WriteLine(ex.Message);
+}
+try
+{
+    excep.NumCheck2();
+}
+catch (Number2Exception ex)
 {
     //Console.WriteLine(MyException.exmessagelist[3]);
     Console.WriteLine(ex.Message);
@@ -259,7 +278,7 @@ catch (ArgumentException ex)
 //try
 //{
 //    excep.Divide();
-    
+
 //}
 //catch (ArithmeticException ex)
 //{

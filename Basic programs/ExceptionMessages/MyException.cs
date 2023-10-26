@@ -23,5 +23,18 @@ namespace Basic_programs.ExceptionMessages
              {3, "Not hundred" },
              {4,"Age is more" }
         };
+        internal class Number1Exception : Exception
+        {
+            public Number1Exception(string message) : base(message)
+            { 
+            }
+        }
+        internal class Number2Exception : Exception
+        {
+            public Number2Exception(string message) : base(message)
+            {
+            }
+        }
     }
 }
+

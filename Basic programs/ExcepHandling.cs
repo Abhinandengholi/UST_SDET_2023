@@ -6,6 +6,7 @@ using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using static Basic_programs.ExceptionMessages.MyException;
 
 namespace Basic_programs
 {
@@ -44,18 +45,22 @@ namespace Basic_programs
             {
                 Console.WriteLine("Cngrtz");
             }
-            else 
+            else
             {
-                throw new ArgumentException(MyException.exmessagelist[3]);
-       
+                //throw new ArgumentException(MyException.exmessagelist[3]);
+                throw new Number1Exception(MyException.exmessagelist[3]);
+
             }
+        }
+        public void NumCheck2() {
             if (Num2 < 100)
             {
                 Console.WriteLine("Congrtz");
             }
             else
             {
-                throw new ArgumentException(MyException.exmessagelist[4]);
+                //throw new ArgumentException(MyException.exmessagelist[4]);
+                throw new Number2Exception(MyException.exmessagelist[4]);
 
             }
             //}
