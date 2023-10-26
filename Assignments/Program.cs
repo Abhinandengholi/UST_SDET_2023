@@ -86,7 +86,8 @@ rect.Draw();*/
 //CarInsurance ci = new("Jeevanraksha", 234, 12000, 2000000);
 //ci.CalculatePremium();
 //Console.WriteLine(" Car Insurance premium amount:" + ci.PremiumAmount);
-using Assignments;
+
+/*using Assignments;
 using System.Security.Cryptography.X509Certificates;
 
 Customer cust1=new (1,"Abhi","6473553763",2300.4);
@@ -128,9 +129,50 @@ List<Customer> cust=new List<Customer>()
     
    
 
-
-
-
 SearchCust("6473553763");
 SearchCust("6543544366");
-DisplayCustomer();
+DisplayCustomer();*/
+using Assignments;
+CallRecord clr1 = new(1, 7846586856, 21);
+CallRecord clr2 = new(2, 8764486438, 11);
+CallRecord clr3 = new(3, 76743764376, 31);
+Dictionary<int, CallRecord> clr = new Dictionary<int, CallRecord>
+{
+    { 0,clr1},
+     { 1,clr2},
+     { 2,clr3}
+};
+CallHistory(7846586856);
+TotalCalls();
+void CallHistory(double phonenum)
+{
+    foreach (var i in clr.Values)
+    {
+        if (phonenum == i.PhoneNumber)
+        {
+            Console.WriteLine("Callid:{0}\tPhonenumber:{1}\t CallTime:{2}",i.Callid,i.PhoneNumber, i.CallTime);
+
+        }
+    }
+}
+void TotalCalls()
+{
+    Dictionary<double,int> totalcall=new Dictionary<double,int>();
+    foreach (var i in clr.Values) 
+    { if (totalcall.ContainsKey(i.PhoneNumber))
+        {
+            totalcall[i.PhoneNumber]++;
+        }
+        else
+        {
+            totalcall[i.PhoneNumber] = 1;
+        }
+    }
+    foreach(var i in totalcall)
+    {
+        Console.WriteLine("phonenumber:{0}", i.Key, i.Value);
+    }
+
+}
+
+
