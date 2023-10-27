@@ -150,7 +150,7 @@ try
 catch(ArgumentException ex)
 {
     Console.WriteLine(ex.Message );
-}*/
+}
 using Assignments;
 using Assignments.ExceptionMesages;
 
@@ -172,6 +172,37 @@ catch (InvalidMedicalDataException ex)
 {
     Console.WriteLine(ex.Message);
 }
+*/
+using Assignments;
+repeat:
+Console.WriteLine("choose option");
+Console.WriteLine("1.Add Patient\n 2.View Patient\n 3.Exit ");
+int option = Convert.ToInt32(Console.ReadLine());
+if (option == 1)
+{
+    Console.WriteLine("Enter patient id:");
+    int id = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Enter patient name:");
+    string? name = Console.ReadLine();
+    Console.WriteLine("Enter age:");
+    int age = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Enter Diagnosis:");
+    string? diagnosis = Console.ReadLine();
+    Patient pat = new(id, name, age, diagnosis);
+    Patient.PatientDetail(pat);
+}
+else if (option == 2)
+{
+    Patient.ViewPatientData();
+}
+Console.WriteLine("Do you want to continue?Y/N");
+string? title=Console.ReadLine();
+if (title == "Y") 
+{
+    goto repeat;
+}
+
+
 
 
 
