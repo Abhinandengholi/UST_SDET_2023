@@ -305,6 +305,7 @@ FileOperations fo=new FileOperations();
 fo.CreateFile();
 fo.WriteData();
 fo.ReadData();
-fo.CopyMoveFile();
+//fo.CopyMoveFile();
 //fo.DeleteFile();
+fo.FileProperties();
 

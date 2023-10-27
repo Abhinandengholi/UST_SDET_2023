@@ -140,7 +140,7 @@ CallRecord.clr.Add(1,clr1)
 CallRecord.clr.Add(2,clr2)
 CallRecord.clr.Add(3,clr3)
 CallRecord.CallHistory(7846586856);
-CallRecord.TotalCalls();*/
+CallRecord.TotalCalls();
 using Assignments;
 Patient pat = new(1, "Aji", 125, "Maleria");
 try
@@ -150,6 +150,28 @@ try
 catch(ArgumentException ex)
 {
     Console.WriteLine(ex.Message );
+}*/
+using Assignments;
+using Assignments.ExceptionMesages;
+
+MedicalRecord mrec = new(1, "Aji", 125, "Maleria",12,2340);
+try
+{
+    MedicalRecord.AddRecord(mrec);
 }
+catch (InvalidPatientDataException ex)
+{
+    Console.WriteLine(ex.Message);
+}
+MedicalRecord mrec1 = new(1, "Adi", 125, "fever", 12, 2340);
+try
+{
+    MedicalRecord.AddRecord(mrec1);
+}
+catch (InvalidMedicalDataException ex)
+{
+    Console.WriteLine(ex.Message);
+}
+
 
 
