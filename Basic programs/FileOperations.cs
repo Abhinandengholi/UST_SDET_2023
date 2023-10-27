@@ -63,10 +63,10 @@ namespace Basic_programs
             Console.WriteLine(fi.FullName);
         Console.WriteLine(fi.CreationTime);
             Console.WriteLine(fi.Extension);    
-            Console.WriteLine(fi.Last);
-            Console.WriteLine(fi.);
-            Console.WriteLine();
-
+            Console.WriteLine(fi.LastAccessTime);
+            Console.WriteLine(fi.Length.ToString());
+            Console.WriteLine(fi.Exists);
+            Console.WriteLine(fi.LastWriteTime);
 
 
         }
