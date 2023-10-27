@@ -61,7 +61,7 @@ namespace Assignments
                 stw.Write(patient.Name + "\t");
                 stw.Write(patient.Age + "\t");
                 stw.Write(patient.Diagnosis + "\t");
-               
+                stw.WriteLine(" ");
                 stw.Flush();
                 stw.Close();
                 fs.Close();

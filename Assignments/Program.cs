@@ -172,7 +172,7 @@ catch (InvalidMedicalDataException ex)
 {
     Console.WriteLine(ex.Message);
 }
-*/
+
 using Assignments;
 repeat:
 Console.WriteLine("choose option");
@@ -198,6 +198,30 @@ else if (option == 2)
 Console.WriteLine("Do you want to continue?Y/N");
 string? title=Console.ReadLine();
 if (title == "Y") 
+{
+    goto repeat;
+}*/
+using Assignments;
+MedicalHistory mh1 = new MedicalHistory(1, 10, "fever", "11/10/2023");
+MedicalHistory mh2 = new MedicalHistory(2, 20, "Maleria", "13/10/2023");
+MedicalHistory mh3 = new MedicalHistory(3, 30, "chickengunia", "17/10/2023");
+
+repeat:
+Console.WriteLine("1.Add Medical History\n 2.View Medical History\n 3.Exit ");
+int option = Convert.ToInt32(Console.ReadLine());
+if (option == 1)
+{
+    MedicalHistory.AddMedicalHistory(mh1);
+    MedicalHistory.AddMedicalHistory(mh2);
+    MedicalHistory.AddMedicalHistory(mh3);
+}
+else if (option == 2)
+{
+    MedicalHistory.ViewMHData();
+}
+Console.WriteLine("Do you want to continue?Y/N");
+string? title = Console.ReadLine();
+if (title == "Y")
 {
     goto repeat;
 }
