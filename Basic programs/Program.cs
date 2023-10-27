@@ -243,11 +243,11 @@ switch (ch)
 //gc.ListHandling();
 //gc.SortedListhandling();
 //26/10/2023
-using Basic_programs;
+/*using Basic_programs;
 using Basic_programs.ExceptionMessages;
 using static Basic_programs.ExceptionMessages.MyException;
 
-ExcepHandling excep=new ExcepHandling(1,105);
+ExcepHandling excep=new ExcepHandling(1,105);*/
 //try
 //{
 //    excep.NumCheck();
@@ -257,7 +257,7 @@ ExcepHandling excep=new ExcepHandling(1,105);
 //    //Console.WriteLine(MyException.exmessagelist[3]);
 //    Console.WriteLine(ex.Message);
 //}
-try
+/*try
 {
     excep.NumCheck();
 }
@@ -274,7 +274,7 @@ catch (Number2Exception ex)
 {
     //Console.WriteLine(MyException.exmessagelist[3]);
     Console.WriteLine(ex.Message);
-}
+}*/
 //try
 //{
 //    excep.Divide();
@@ -298,5 +298,13 @@ catch (Number2Exception ex)
 //{
 //    Console.WriteLine("done");//release memomry,before exiting the code
 //}
+//27/10/2023
+using Basic_programs;
 
+FileOperations fo=new FileOperations();
+fo.CreateFile();
+fo.WriteData();
+fo.ReadData();
+fo.CopyMoveFile();
+//fo.DeleteFile();
 
