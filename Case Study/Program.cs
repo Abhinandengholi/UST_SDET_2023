@@ -1,4 +1,4 @@
-﻿using Case_Study;
+﻿/*using Case_Study;
 using System.ComponentModel.Design;
 
 
@@ -90,4 +90,143 @@ do
     }
     Console.WriteLine("Do you want to continue?");
     num =Convert.ToInt32( Console.ReadLine());
-} while (num!=0);
+} while (num!=0);*/
+//28/10/2023
+using Case_Study;
+Customers cust = new Customers(100, "Abhie", "Abhi@example.com");
+PhysicalProduct physProd1 = new PhysicalProduct(10, "Realme", 55, 102, 3.5, "140*120");
+PhysicalProduct physProd2 = new PhysicalProduct(11, "Pixel", 55, 101, 5.5, "120*110");
+DigitalProduct digiProd1 = new DigitalProduct(11, "giftcard1", 35, 400, "www.flipkart.com", "txt");
+DigitalProduct digiProd2 = new DigitalProduct(20, "giftcard2", 35, 400, "www.flipkart.com", "txt");
+Order ordr = new();
+ordr.AddProduct(physProd1);
+ordr.AddProduct(physProd2);
+ordr.AddProduct(digiProd1);
+ordr.AddProduct(digiProd2);
+
+
+Console.WriteLine("Welcome");
+repeat1:
+repeat2:
+Console.WriteLine("1.Admin 2.customer");
+string? choose = Console.ReadLine();
+if (choose == "1")
+{
+repeat:
+    Console.WriteLine("1.Add Product 2.View Product 3.Back");
+    string? choose1 = Console.ReadLine();
+    if (choose1 == "1")
+    {
+        Console.WriteLine("Products Added");
+    }
+    else if (choose1 == "2")
+    {
+        Console.WriteLine("Products");
+        foreach (var product in Order.products)
+        {
+            Console.WriteLine("ID: {0}, Name: {1}, Price: {2}, Stock: {3}", product.Value.ProductId, product.Value.Name, product.Value.Price, product.Value.StockQuantity);
+        }
+    }
+    else if (choose1 == "3")
+    {
+        goto repeat1;
+    }
+    goto repeat;
+}
+else if (choose == "2")
+{
+    Console.WriteLine("Products");
+    foreach (var product in Order.products)
+    {
+        Console.WriteLine("ID: {0}, Name: {1}, Price: {2}, Stock: {3}", product.Value.ProductId, product.Value.Name, product.Value.Price, product.Value.StockQuantity);
+    }
+    Console.WriteLine("1.Physical Product 2.Digital Product");
+    string? choose2 = Console.ReadLine();
+    if (choose2 == "1")
+    {
+        Console.WriteLine("1.Place Order 2.Contact Support");
+        string? choose3 = Console.ReadLine();
+        if (choose3 == "1")
+        {
+            Order customerOrder = new Order
+            {
+                OrderID = 1,
+                ProductID = 10,
+                Quantity = 1,
+                TotalAmount = 25,
+                OrderDate = DateTime.Now,
+                Status = "Pending"
+            };
+            ordr.GetProduct(10);
+            Console.WriteLine("Confirm Order? y/n");
+            string? choice = Console.ReadLine();
+            if (choice == "y")
+            {
+                cust.PlaceOrder(customerOrder);
+                physProd1.PlaceOrder();
+                ordr.AddOrder(101, customerOrder);
+                ordr.GetCustomerOrders(101);
+                Console.WriteLine("Proceed for payment? y/n");
+                string? choice1 = Console.ReadLine();
+                if (choice1 == "y")
+                {
+                    physProd1.ProcessPayment();
+                    cust.ProcessPayment();
+                    cust.ViewOrderHistory();
+                    physProd1.DeliverProduct();
+                }
+            }
+        }
+        else if (choose3 == "2")
+        {
+            cust.ContactSupport();
+        }
+    }
+    if (choose2 == "2")
+    {
+        Console.WriteLine("1.Place Order 2.Contact Support");
+        string? choose4 = Console.ReadLine();
+        if (choose4 == "1")
+        {
+            Order customerOrder = new Order
+            {
+                OrderID = 1,
+                ProductID = 21,
+                Quantity = 1,
+                TotalAmount = 25,
+                OrderDate = DateTime.Now,
+                Status = "Pending"
+            };
+            ordr.GetProduct(21);
+            Console.WriteLine("Confirm? y/n");
+            string? choice = Console.ReadLine();
+            if (choice == "y")
+            {
+                cust.PlaceOrder(customerOrder);
+                digiProd1.PlaceOrder();
+                ordr.AddOrder(101, customerOrder);
+                ordr.GetCustomerOrders(101);
+                cust.ViewOrderHistory();
+                Console.WriteLine("Proceed for payment? y/n");
+                string? choice1 = Console.ReadLine();
+                if (choice1 == "y")
+                {
+                    digiProd1.ProcessPayment();
+                    cust.ProcessPayment();
+                    cust.ViewOrderHistory();
+                    digiProd1.DeliverProduct();
+                }
+            }
+        }
+        else if (choose4 == "2")
+        {
+            cust.ContactSupport();
+        }
+    }
+}
+Console.WriteLine("Do you want to continue? (Y/N");
+string? titleread = Console.ReadLine();
+if (titleread == "y")
+{
+    goto repeat2;
+}
