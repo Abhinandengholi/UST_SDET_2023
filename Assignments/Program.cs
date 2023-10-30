@@ -200,7 +200,7 @@ string? title=Console.ReadLine();
 if (title == "Y") 
 {
     goto repeat;
-}*/
+}
 using Assignments;
 MedicalHistory mh1 = new MedicalHistory(1, 10, "fever", "11/10/2023");
 MedicalHistory mh2 = new MedicalHistory(2, 20, "Maleria", "13/10/2023");
@@ -224,7 +224,13 @@ string? title = Console.ReadLine();
 if (title == "Y")
 {
     goto repeat;
-}
+}*/
+using Assignments;
+var typ1 = "double";
+var typ2 = 2;
+RoomReservation<string>.RoomBook(123, ref typ1);
+RoomReservation<int>.RoomBook(101, ref typ2);
+RoomReservation<string>.RoomCancel(123);
 
 
 
