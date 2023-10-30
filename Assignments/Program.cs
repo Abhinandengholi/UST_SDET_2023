@@ -224,13 +224,25 @@ string? title = Console.ReadLine();
 if (title == "Y")
 {
     goto repeat;
-}*/
+}
+//30/10/2023
 using Assignments;
 var typ1 = "double";
 var typ2 = 2;
 RoomReservation<string>.RoomBook(123, ref typ1);
 RoomReservation<int>.RoomBook(101, ref typ2);
-RoomReservation<string>.RoomCancel(123);
+RoomReservation<string>.RoomCancel(123);*/
+//Assignment2
+using Assignments;
+var typ1 = "Phone1";
+var typ2 = 1010;
+var typ3 = "phone2";
+Products<string>.AddProduct(1, ref typ1, 100, 2);
+Products<int>.AddProduct(2, ref typ2, 50, 3);
+Products<string>.UpdateProduct(1, typ3);
+Products<string>.DeleteProduct(2);
+Products<string>.SearchProduct(1);
+
 
 
 
