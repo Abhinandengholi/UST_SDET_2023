@@ -75,5 +75,35 @@ internal class Order
             return new List<Order>();
         }
     }
+    public static void CreateFile()
+    {
+        FileStream file = new FileStream("D:\\Training handson\\Basic soultion\\Case Study\\Report\\Data report.txt", FileMode.Create, FileAccess.Write);
+
+    }
+    public static void AddReport(Order order)
+    {
+        FileInfo fi = new FileInfo("D:\\Training handson\\Basic soultion\\Case Study\\Report\\Data report.txt");
+        if (!fi.Exists)
+            CreateFile();
+        else
+        {
+            using StreamWriter stw = fi.AppendText();
+
+
+            stw.Write(order.OrderID + "\t");
+            stw.Write(order.ProductID + "\t");
+            stw.Write(order.Quantity + "\t");
+            stw.Write(order.OrderDate + "\t");
+            stw.Write(order.TotalAmount + "\t");
+            stw.Write(order.Status + "\t");
+            stw.WriteLine(" ");
+
+        }
+    }
+
+
 }
+
+
+
 

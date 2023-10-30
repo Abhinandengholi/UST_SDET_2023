@@ -299,13 +299,45 @@ catch (Number2Exception ex)
 //    Console.WriteLine("done");//release memomry,before exiting the code
 //}
 //27/10/2023
+//using Basic_programs;
+
+//FileOperations fo=new FileOperations();
+//fo.CreateFile();
+//fo.WriteData();
+//fo.ReadData();
+////fo.CopyMoveFile();
+////fo.DeleteFile();
+//fo.FileProperties();
+//30/10/2023
 using Basic_programs;
+/*GenericEx<int> g1 = new GenericEx<int>(10,20);
+Console.WriteLine(g1.Val1 + " " + g1.Val2);
 
-FileOperations fo=new FileOperations();
-fo.CreateFile();
-fo.WriteData();
-fo.ReadData();
-//fo.CopyMoveFile();
-//fo.DeleteFile();
-fo.FileProperties();
+GenericEx<double> g2 = new GenericEx<double>(10.9887, 20.234);
+Console.WriteLine(g2.Val1 + " " + g2.Val2);
 
+GenericEx<string> g3 = new GenericEx<string>("Hi", "man");
+Console.WriteLine(g3.Val1 + " " + g3.Val2);
+
+GenericEx<bool> g4 = new GenericEx<bool>(true, false);
+Console.WriteLine(g4.Val1 + " " + g4.Val2);
+//int n1;
+//n1 = {10,202}
+//GenericEx<int> ga=new GenericEx<int>(new int[] { 10,20});
+//GenericEx<int> ga = new GenericEx<int>(new int[3] { 10,20,30});
+//ga.Display();
+static void Swap<T>(ref T num1, ref T num2)
+{
+    T temp;
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+
+}
+int n1 = 10, n2 = 20;
+    char c1='A', c2 = 'B';
+Swap<int>(ref n1, ref n2);
+Swap<char>(ref c1, ref c2);
+
+Console.WriteLine("a={0},b={1}",n1,n2);
+Console.WriteLine("c={0},d={1}", c1, c2);*/

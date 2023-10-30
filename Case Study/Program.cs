@@ -96,7 +96,7 @@ using Case_Study;
 Customers cust = new Customers(100, "Abhie", "Abhi@example.com");
 PhysicalProduct physProd1 = new PhysicalProduct(10, "Realme", 55, 102, 3.5, "140*120");
 PhysicalProduct physProd2 = new PhysicalProduct(11, "Pixel", 55, 101, 5.5, "120*110");
-DigitalProduct digiProd1 = new DigitalProduct(11, "giftcard1", 35, 400, "www.flipkart.com", "txt");
+DigitalProduct digiProd1 = new DigitalProduct(21, "giftcard1", 35, 400, "www.flipkart.com", "txt");
 DigitalProduct digiProd2 = new DigitalProduct(20, "giftcard2", 35, 400, "www.flipkart.com", "txt");
 Order ordr = new();
 ordr.AddProduct(physProd1);
@@ -136,10 +136,7 @@ repeat:
 else if (choose == "2")
 {
     Console.WriteLine("Products");
-    foreach (var product in Order.products)
-    {
-        Console.WriteLine("ID: {0}, Name: {1}, Price: {2}, Stock: {3}", product.Value.ProductId, product.Value.Name, product.Value.Price, product.Value.StockQuantity);
-    }
+    
     Console.WriteLine("1.Physical Product 2.Digital Product");
     string? choose2 = Console.ReadLine();
     if (choose2 == "1")
@@ -164,8 +161,8 @@ else if (choose == "2")
             {
                 cust.PlaceOrder(customerOrder);
                 physProd1.PlaceOrder();
-                ordr.AddOrder(101, customerOrder);
-                ordr.GetCustomerOrders(101);
+                ordr.AddOrder(100, customerOrder);
+                ordr.GetCustomerOrders(100);
                 Console.WriteLine("Proceed for payment? y/n");
                 string? choice1 = Console.ReadLine();
                 if (choice1 == "y")
@@ -174,6 +171,7 @@ else if (choose == "2")
                     cust.ProcessPayment();
                     cust.ViewOrderHistory();
                     physProd1.DeliverProduct();
+                    Order.AddReport(customerOrder);
                 }
             }
         }
@@ -204,8 +202,8 @@ else if (choose == "2")
             {
                 cust.PlaceOrder(customerOrder);
                 digiProd1.PlaceOrder();
-                ordr.AddOrder(101, customerOrder);
-                ordr.GetCustomerOrders(101);
+                ordr.AddOrder(100, customerOrder);
+                ordr.GetCustomerOrders(100);
                 cust.ViewOrderHistory();
                 Console.WriteLine("Proceed for payment? y/n");
                 string? choice1 = Console.ReadLine();
@@ -215,6 +213,7 @@ else if (choose == "2")
                     cust.ProcessPayment();
                     cust.ViewOrderHistory();
                     digiProd1.DeliverProduct();
+                    Order.AddReport(customerOrder);
                 }
             }
         }
