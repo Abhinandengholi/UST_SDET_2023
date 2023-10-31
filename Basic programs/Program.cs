@@ -309,7 +309,7 @@ catch (Number2Exception ex)
 ////fo.DeleteFile();
 //fo.FileProperties();
 //30/10/2023
-using Basic_programs;
+//using Basic_programs;
 /*GenericEx<int> g1 = new GenericEx<int>(10,20);
 Console.WriteLine(g1.Val1 + " " + g1.Val2);
 
@@ -341,3 +341,54 @@ Swap<char>(ref c1, ref c2);
 
 Console.WriteLine("a={0},b={1}",n1,n2);
 Console.WriteLine("c={0},d={1}", c1, c2);*/
+//31/10/2023
+using Basic_programs;
+//public delegate void Del1();
+public delegate void Del1();
+public delegate void Del2(string message);
+public delegate void Del3(int n1,int n2);
+public delegate int Del4(int n1,int n2);
+class Program
+{
+    //public static void delcall()
+    //{
+    //    DelegEx delEx = new();
+    //    Del1 dobj1 = DelegEx.MethodA;
+    //    dobj1.Invoke();
+
+    //    Del2 dobj2 = DelegEx.MethodB;
+    //    dobj2.Invoke("hi");
+
+    //}
+    //public static void Main(string[] args)
+    //{
+
+    //    //DelegEx delEx = new();
+    //    //Del1 dobj1 = DelegEx.MethodA;
+    //    //dobj1.Invoke();
+
+    //    //Del2 dobj2=DelegEx.MethodB;
+    //    //dobj2.Invoke("hi");
+    //delcall();
+    //}
+    public static void Main(string[] args)
+    
+    {
+        DelegEx delEx1 = new();
+          Del3 dobj3 = delEx1.Add;
+        Del3 dobj5 = delEx1.Sub;
+           dobj3(10,20);
+
+        Del3 dforall = dobj3 + dobj5;
+        dforall(4, 5);
+             DelegEx delEx2 = new();
+        Del4 dobj4 = delEx2.AddR;
+        Console.WriteLine(dobj4(10, 2));
+
+
+    }
+
+
+
+}
+

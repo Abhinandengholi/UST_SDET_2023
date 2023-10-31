@@ -231,7 +231,7 @@ var typ1 = "double";
 var typ2 = 2;
 RoomReservation<string>.RoomBook(123, ref typ1);
 RoomReservation<int>.RoomBook(101, ref typ2);
-RoomReservation<string>.RoomCancel(123);*/
+RoomReservation<string>.RoomCancel(123);
 //Assignment2
 using Assignments;
 var typ1 = "Phone1";
@@ -242,7 +242,47 @@ Products<int>.AddProduct(2, ref typ2, 50, 3);
 Products<string>.UpdateProduct(1, typ3);
 Products<string>.DeleteProduct(2);
 Products<string>.SearchProduct(1);
+*/
+//31/10/2023
+using Assignments;
+public delegate double Empl(double performncrate);
+class Program
+{
+    public static void Main(string[] args) 
+    {
 
+    
+    repeat:
+        Console.WriteLine("Enter Employee ID:");
+        int a = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter Employee Name:");
+        string? b = Console.ReadLine();
+        Employee1 emply = new();
+        emply.EmployeeID = a;
+        emply.Name = b;
+        Console.WriteLine("Bonus Calculation Method:");
+        Console.WriteLine("1. Performance Threshold 2. Department Specific Rules");
+        string? choose = Console.ReadLine();
+        if (choose == "1")
+        {
+            Empl empl = Employee1.BonusCalculation;
+            Console.WriteLine("Enter Performance Threshold:");
+            Console.WriteLine(empl.Invoke(Convert.ToDouble(Console.ReadLine())));
+        }
+        else if (choose == "2")
+        {
+            Empl empl = Employee1.CalculateBonus;
+            Console.WriteLine("Enter Department Spcific Rule Rate:");
+            Console.WriteLine(empl.Invoke(Convert.ToDouble(Console.ReadLine())));
+        }
+        Console.WriteLine("Do you want to continue? (Y/N");
+        string? titleread = Console.ReadLine();
+        if (titleread == "y")
+        {
+            goto repeat;
+        }
+    }
+}
 
 
 
