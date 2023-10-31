@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments", "Assignments\Assignments.csproj", "{51623A8E-D786-4A43-8DCA-6B98A9644468}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case_Study", "Case Study\Case_Study.csproj", "{A2520AB5-86A6-4C4A-9051-DD3A6FB6BAE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Case_Study", "Case Study\Case_Study.csproj", "{A2520AB5-86A6-4C4A-9051-DD3A6FB6BAE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{5B7D453E-1EB6-4DC8-B5A2-C9880E7D6067}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{A2520AB5-86A6-4C4A-9051-DD3A6FB6BAE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2520AB5-86A6-4C4A-9051-DD3A6FB6BAE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2520AB5-86A6-4C4A-9051-DD3A6FB6BAE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B7D453E-1EB6-4DC8-B5A2-C9880E7D6067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B7D453E-1EB6-4DC8-B5A2-C9880E7D6067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B7D453E-1EB6-4DC8-B5A2-C9880E7D6067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B7D453E-1EB6-4DC8-B5A2-C9880E7D6067}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
