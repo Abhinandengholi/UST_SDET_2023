@@ -242,8 +242,8 @@ Products<int>.AddProduct(2, ref typ2, 50, 3);
 Products<string>.UpdateProduct(1, typ3);
 Products<string>.DeleteProduct(2);
 Products<string>.SearchProduct(1);
-*/
-//31/10/2023
+
+//31/10/2023 Assignment
 using Assignments;
 public delegate double Empl(double performncrate);
 class Program
@@ -281,6 +281,25 @@ class Program
         {
             goto repeat;
         }
+    }
+}*/
+using Assignments;
+
+public delegate void Htl();
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+
+        HotelEvent hotelEvent = new HotelEvent("DJFunk", "11-10-23", "Tvm", 1000);
+        HotelEvent hotelEvent1 = new HotelEvent("AmigozDj", "03-10-23", "Tvm", 4000);
+        HotelEvent.AddEvent(hotelEvent);
+        HotelEvent.AddEvent(hotelEvent1);
+        Htl hotlevt2 = HotelEvent.RegisterEvent;
+        Htl hotlevt3 = HotelEvent.RegStatus;
+        Htl objall = hotlevt2 + hotlevt3;
+        objall.Invoke();
     }
 }
 
