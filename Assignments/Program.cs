@@ -305,7 +305,8 @@ class Program
 */
 //1/11/2023
 using Assignments;
-TourismDestination.Sorting();
+//TourismDestination.Sorting();
+TouristDestination.TouristSpot();
 
 
 
