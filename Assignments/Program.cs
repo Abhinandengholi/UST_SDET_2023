@@ -282,7 +282,7 @@ class Program
             goto repeat;
         }
     }
-}*/
+}
 using Assignments;
 
 public delegate void Htl();
@@ -302,7 +302,10 @@ class Program
         objall.Invoke();
     }
 }
-
+*/
+//1/11/2023
+using Assignments;
+TourismDestination.Sorting();
 
 
 
