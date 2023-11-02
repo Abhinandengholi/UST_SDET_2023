@@ -304,9 +304,52 @@ class Program
 }
 */
 //1/11/2023
-using Assignments;
+//using Assignments;
 //TourismDestination.Sorting();
-TouristDestination.TouristSpot();
+//TouristDestination.TouristSpot();
+//02/11/2023
+
+using Assignments;
+
+class Program
+{
+    static async Task Main()
+    {
+        Hotel htl1 = new Hotel("Tajmahal", "India", 4.5, "Taj", 400);
+        Hotel htl2 = new Hotel("Charminar", "India", 4.3, "Alsaj", 300);
+        Console.WriteLine("Avaialible rooms at Taj:" + htl1.AvailableRoom);
+        Console.WriteLine("Avaialible rooms at Alsaj:" + htl2.AvailableRoom);
+        await BookRoomsAsync(htl1, 4);
+        await BookRoomsAsync(htl2, 6);
+        Console.WriteLine("Avaialible rooms at Taj:" + htl1.AvailableRoom);
+        Console.WriteLine("Avaialible rooms at Alsaj:" + htl2.AvailableRoom);
+        static async Task BookRoomsAsync(Hotel hotel, int requestedRoom)
+        {
+            await hotel.HotelbookingAsync(requestedRoom);
+        }
+    }
+}
+//        int numberOfUsers = 5;
+
+//        List<Task> bookTasks = new List<Task>();
+
+//        for (int i = 1; i <= numberOfUsers; i++)
+//        {
+//            Console.WriteLine("Enter the number of room book:");
+//                int roomsReq=Convert.ToInt32(Console.ReadLine());
+
+//            Task booktsk = htl.Hotelbooking(roomsReq);
+//            bookTasks.Add(booktsk);
+//        }
+
+//        await Task.WhenAll(registrationTasks);
+
+//        Console.WriteLine($"Course registration completed. Total registered students: {course.GetRegisteredStudentCount()}");
+//    }
+//}
+
+
+
 
 
 
