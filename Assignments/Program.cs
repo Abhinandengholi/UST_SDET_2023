@@ -1,5 +1,6 @@
-﻿// Assignment 18/10/2023
-/*using Assignments;
+﻿using Assignments;
+// Assignment 18/10/2023
+/*
 
 Student student1 = new ("Abhi",45, 80, 15);
 Console.WriteLine(student1.student_name);
@@ -302,14 +303,13 @@ class Program
         objall.Invoke();
     }
 }
-*/
+
 //1/11/2023
 //using Assignments;
 //TourismDestination.Sorting();
 //TouristDestination.TouristSpot();
 //02/11/2023
-
-using Assignments;
+//Assignment1
 
 class Program
 {
@@ -329,24 +329,43 @@ class Program
         }
     }
 }
-//        int numberOfUsers = 5;
+*/
+//Assignment2
+class Program
+{
+    static void Main()
+    {
 
-//        List<Task> bookTasks = new List<Task>();
+        List<Thread> packageThreads = new List<Thread>();
+        TourPackage tp1 = new TourPackage(1, "Ladakh", "01/09/21", 20000);
+        TourPackage tp2 = new TourPackage(2, "Dubai", "02/10/22", 50000);
+        TourPackage tp3 = new TourPackage(3, "Mexico", "03/11/23", 60000);
+        Thread pack1 = new Thread(() => TourPackage.PackageBooking(tp1));
+        Thread pack2 = new Thread(() => TourPackage.PackageBooking(tp2));
+        Thread pack3 = new Thread(() => TourPackage.PackageBooking(tp3));
+        packageThreads.Add(pack1);
+        packageThreads.Add(pack2);
+        packageThreads.Add(pack3);
+        foreach (Thread t in packageThreads)
+        {
+            t.Start();
+        }
+        foreach (Thread t in packageThreads)
+        {
+            t.Join();
+        }
+        foreach (var t in TourPackage.bookdpackage)
+        {
+            Console.WriteLine("PackageID: {0},Destination:{1}, Date:{2}, Price: {3}", t.PackageID, t.Destination, t.StartDate, t.Price);
+        }
+    }
+}
+        
 
-//        for (int i = 1; i <= numberOfUsers; i++)
-//        {
-//            Console.WriteLine("Enter the number of room book:");
-//                int roomsReq=Convert.ToInt32(Console.ReadLine());
+   
 
-//            Task booktsk = htl.Hotelbooking(roomsReq);
-//            bookTasks.Add(booktsk);
-//        }
+  
 
-//        await Task.WhenAll(registrationTasks);
-
-//        Console.WriteLine($"Course registration completed. Total registered students: {course.GetRegisteredStudentCount()}");
-//    }
-//}
 
 
 
