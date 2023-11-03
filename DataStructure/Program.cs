@@ -100,7 +100,7 @@ class Program
 }
 }
 
-*/
+
 {
     static void Main()
     {
@@ -119,4 +119,76 @@ class Program
         }
     }
 }
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 5, 1, 4, 2, 8 };
+
+        Console.WriteLine("Original Array:");
+        PrintArray(arr);
+
+        BubbleSort.Sort(arr);
+
+        Console.WriteLine("Sorted Array:");
+        PrintArray(arr);
+    }
+    static void PrintArray(int[] arr)
+    {
+        foreach (var num in arr)
+        {
+            Console.Write(num + " ");
+        }
+        Console.WriteLine();
+    }
+}
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 5, 1, 4, 2, 8 };
+
+        Console.WriteLine("Original Array:");
+        PrintArray(arr);
+
+        InsertionSort.Sort(arr);
+
+        Console.WriteLine("Sorted Array:");
+        PrintArray(arr);
+    }
+
+    static void PrintArray(int[] arr)
+    {
+        foreach (var num in arr)
+        {
+            Console.Write(num + " ");
+        }
+        Console.WriteLine();
+    }
+}*/
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 38, 27, 43, 3, 9, 82, 10 };
+
+        Console.WriteLine("Original Array:");
+        PrintArray(arr);
+
+        MergeSort.Sort(arr);
+
+        Console.WriteLine("Sorted Array:");
+        PrintArray(arr);
+    }
+
+    static void PrintArray(int[] arr)
+    {
+        foreach (var num in arr)
+        {
+            Console.Write(num + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
 
