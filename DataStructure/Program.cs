@@ -165,7 +165,7 @@ class Program
         }
         Console.WriteLine();
     }
-}*/
+}
 class Program
 {
     static void Main()
@@ -189,6 +189,23 @@ class Program
         }
         Console.WriteLine();
     }
-}
+}*/
+//traversal
+class Program
+{
+    static void Main()
+    {
+        BinaryTree binaryTree = new BinaryTree();
 
+        binaryTree.Insert(10);
+        binaryTree.Insert(5);
+        binaryTree.Insert(15);
+        binaryTree.Insert(3);
+        binaryTree.Insert(7);
+
+        binaryTree.InorderTraversal();
+        binaryTree.PreorderTraversal();
+        binaryTree.PostorderTraversal();
+    }
+}
 

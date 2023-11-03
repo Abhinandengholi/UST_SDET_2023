@@ -329,7 +329,7 @@ class Program
         }
     }
 }
-*/
+
 //Assignment2
 class Program
 {
@@ -359,17 +359,45 @@ class Program
             Console.WriteLine("PackageID: {0},Destination:{1}, Date:{2}, Price: {3}", t.PackageID, t.Destination, t.StartDate, t.Price);
         }
     }
-}
-        
+}*/
+//Assignment 03/11/2023
+/*
+CustomLinkedList taskManager = new CustomLinkedList();
 
-   
+taskManager.AddTask(1, "Complete project proposal");
+taskManager.AddTask(2, "Buy groceries");
+taskManager.AddTask(3, "Read a book");
 
-  
+Console.WriteLine("All Tasks:");
+taskManager.DisplayTasks();
 
+taskManager.MarkTaskAsCompleted(2);
+Console.WriteLine("\nCompleted Tasks:");
+taskManager.DisplayCompletedTasks();
 
+Console.WriteLine("\nPending Tasks:");
+taskManager.DisplayPendingTasks();
 
+taskManager.RemoveTask(3);
+Console.WriteLine("\nTasks after removing one task:");
+taskManager.DisplayTasks(); 
+*/
+FamilyMember grandparent = new FamilyMember("Grandparent", 68);
+FamilyTree familyTree = new FamilyTree(grandparent);
 
+FamilyMember parent1 = new FamilyMember("Parent 1", 40);
+FamilyMember parent2 = new FamilyMember("Parent 2", 35);
+FamilyMember child1 = new FamilyMember("Child 1", 25);
+FamilyMember child2 = new FamilyMember("Child 2", 24);
+FamilyMember grandchild1 = new FamilyMember("Grandchild 1", 6);
 
+// Build family tree relationships
+grandparent.AddChild(parent1);
+grandparent.AddChild(parent2);
+parent1.AddChild(child1);
+parent1.AddChild(child2);
+child1.AddChild(grandchild1);
 
-
-
+// Display family tree
+Console.WriteLine("Family Tree:");
+familyTree.DisplayFamilyTree();
