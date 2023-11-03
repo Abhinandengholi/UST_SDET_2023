@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Case_Study", "Case Study\Ca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ", "LINQ\LINQ.csproj", "{5B7D453E-1EB6-4DC8-B5A2-C9880E7D6067}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadsEx", "ThreadsEx\ThreadsEx.csproj", "{36F51FB6-2F68-4909-A13F-D215D4265053}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadsEx", "ThreadsEx\ThreadsEx.csproj", "{36F51FB6-2F68-4909-A13F-D215D4265053}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructure", "DataStructure\DataStructure.csproj", "{9C0247EF-F390-4217-9D2B-7BE81628625D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{36F51FB6-2F68-4909-A13F-D215D4265053}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36F51FB6-2F68-4909-A13F-D215D4265053}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36F51FB6-2F68-4909-A13F-D215D4265053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0247EF-F390-4217-9D2B-7BE81628625D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0247EF-F390-4217-9D2B-7BE81628625D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0247EF-F390-4217-9D2B-7BE81628625D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0247EF-F390-4217-9D2B-7BE81628625D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
