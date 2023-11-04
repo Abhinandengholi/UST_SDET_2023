@@ -69,18 +69,3 @@ namespace Assignments
     }
 }
 
-//        Console.WriteLine("\nTourist Destinations Sorted by Price Per Night (Ascending Order):");
-//var sortedDestinationsByPrice = destinations.OrderBy(dest => dest.PricePerNight);
-//foreach (var dest in sortedDestinationsByPrice)
-//{
-//    Console.WriteLine($"Name: {dest.Name}, Location: {dest.Location}, Rating: {dest.Rating}, Price per Night: {dest.PricePerNight:C}");
-//}
-
-//string filterLocation = "Tropical Island";
-//Console.WriteLine($"\nTourist Destinations in {filterLocation}:");
-//var filteredDestinations = destinations.Where(dest => dest.Location == filterLocation);
-//foreach (var dest in filteredDestinations)
-//{
-//    Console.WriteLine($"Name: {dest.Name}, Location: {dest.Location}, Rating: {dest.Rating}, Price per Night: {dest.PricePerNight:C}");
-//}
-//    }
