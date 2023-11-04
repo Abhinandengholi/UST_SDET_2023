@@ -320,7 +320,7 @@ class Program
                 {
                     Console.WriteLine("Course code for Registration:");
                     int regcourse = Convert.ToInt32(Console.ReadLine());
-                    Course regstrcourse = EnrollementRec.courss.FirstOrDefault(c => c.CourseCode == regcourse);
+                    Course regstrcourse = EnrollementRec.courss.FirstOrDefault(c => c.CourseCode== regcourse);
                     EnrollAsync(studentrecord, regstrcourse);
                     Console.WriteLine("Enrolled in course");
                     Console.WriteLine("Course Details:");
